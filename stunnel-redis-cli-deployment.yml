@@ -17,6 +17,6 @@ spec:
       containers:
       - name: stunnel-redis-cli
         image: pideoh/stunnel-redis-cli:latest
-    env:
-    - name: STUNNEL_CONNECT
-      value: "redis.endpoint.here:6380"
+        env:
+        - name: STUNNEL_CONNECT
+          value: "redis.endpoint.here:6380"
