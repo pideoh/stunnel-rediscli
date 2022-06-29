@@ -138,8 +138,3 @@ jobs:
           docker push pideoh/apps:latest
       - notify_slack_fail
       - notify_slack_pass
-
-workflows:
-  startup:
-    jobs:
-      - build
