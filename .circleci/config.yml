@@ -129,15 +129,6 @@ jobs:
     machine:
       image: ubuntu-2004:202101-01
     resource_class: medium
-    parameters:
-      appdir:
-        type: string
-        default: null
-        description: appdir
-      appname:
-        type: string
-        default: null
-        description: appname
     steps:
       - checkout
       - run: |
