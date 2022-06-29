@@ -1,0 +1,6 @@
+foreground = yes
+
+[redis-cli]
+client = yes
+accept = 127.0.0.1:6379
+connect = ${STUNNEL_CONNECT}

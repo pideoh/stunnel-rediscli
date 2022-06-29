@@ -1,0 +1,14 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2004:202101-01
+    resource_class: medium
+    steps:
+      - checkout
+      - run: |
+          docker build -t pideoh/stunnel-rediscli:latest .
+      - run: |
+          echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
+          docker push pideoh/stunnel-rediscli:latest
