@@ -9,7 +9,7 @@ if [[ -z "${STUNNEL_CONNECT}" ]]; then
 fi
 
 if [[ ! -s ${STUNNEL_CONF} ]]; then
-    cat /etc/stunnel/stunnel.conf.template | envsubst | trim > ${STUNNEL_CONF}
+    cat /etc/stunnel/stunnel.conf.template | envsubst > ${STUNNEL_CONF}
 fi
 
-stunnel /etc/stunnel/redis-stunnel.conf
+stunnel /etc/stunnel/stunnel.conf
