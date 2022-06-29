@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stunnel-redis-cli-deployment
+  labels:
+    app: stunnel-redis-cli
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stunnel-redis-cli
+  template:
+    metadata:
+      labels:
+        app: stunnel-redis-cli
+    spec:
+      containers:
+      - name: stunnel-redis-cli
+        image: pideoh/stunnel-redis-cli:latest
