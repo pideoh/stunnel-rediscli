@@ -11,4 +11,4 @@ jobs:
           docker build -t pideoh/stunnel-rediscli:latest .
       - run: |
           echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
-          docker push pideoh/apps:latest
+          docker push pideoh/astunnel-rediscli:latest
