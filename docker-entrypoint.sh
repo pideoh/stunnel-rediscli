@@ -8,8 +8,5 @@ if [[ -z "${STUNNEL_CONNECT}" ]]; then
     exit 1
 fi
 
-if [[ ! -s ${STUNNEL_CONF} ]]; then
-    cat /etc/stunnel/stunnel.conf.template | envsubst > ${STUNNEL_CONF}
-fi
-
+cat /etc/stunnel/stunnel.conf.template | envsubst > ${STUNNEL_CONF}
 stunnel /etc/stunnel/stunnel.conf
